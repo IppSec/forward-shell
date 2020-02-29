@@ -52,7 +52,7 @@ class WebShell(object):
     def RunRawCmd(self, cmd, timeout=50, proxy="http://127.0.0.1:8080"):
         #print(f"Going to run cmd: {cmd}")
         # MODIFY THIS: This is where your payload code goes
-        payload += cmd
+        payload = cmd
 
         if proxy:
             proxies = self.proxies
